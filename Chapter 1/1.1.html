@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Square Game</title>
+    <link rel="stylesheet" type="text/css" href="../Style.css">
+
+    <script>
+      var width = 10;
+      var height = 10;
+
+      var marginTop = 345;
+      var marginRight = 345;
+
+      var stretch = new Audio();
+      stretch.src = "../Sounds/grow.mp3";
+
+      var success = new Audio();
+      success.src = "../Sounds/success.mp3";
+
+      function grow() {
+        if (stretch.paused) {
+            stretch.play();
+        } else {
+            stretch.currentTime = 0
+        }
+
+        if (width < 100) {
+          width += 2;
+          marginRight -= 1;
+
+          document.getElementById("square").style.width = width + "px";
+          document.getElementById("square").style.marginRight = marginRight + "px";
+        } else {
+          height += 2;
+          marginTop -= 1;
+
+          document.getElementById("square").style.height = height + "px";
+          document.getElementById("square").style.marginTop = marginTop + "px";
+
+          if (height >= 100) {
+            window.open("1.2.html","_self")
+        }
+      }
+    }
+    </script>
+  </head>
+
+  <body>
+    <button id="orb" type="button" onclick="grow()"></button>
+    <div id="square"></div>
+  </body>
+
+</html>

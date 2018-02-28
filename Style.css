@@ -1,0 +1,51 @@
+body {
+  background-color: black;
+  color: white;
+  font-family: "Courier New", monospace;
+  text-align: center;
+}
+
+button {
+  font-size: 50px;
+  border: none;
+  background-color: black;
+  color: white;
+  font-family: "Courier New", monospace;
+  padding: 0;
+  margin: 0;
+  transition: all .2s ease-in-out;
+}
+button:hover {transform: scale(1.1);}
+button:focus {outline:0;}
+
+/* Start Screen */
+#title {
+  color: white;
+  font-size: 200px;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+/* 1.1 */
+#orb {
+  background-color: skyblue;
+  height: 200px;
+  width: 200px;
+  border-radius: 100px;
+  float: left;
+  margin-left: 250px;
+  margin-top: 250px;
+}
+#orb:hover {
+  transform: none;
+  box-shadow: 0px 0px 400px rgba(135, 206, 350, 1);
+}
+
+#square {
+  background-color: white;
+  width: 10px;
+  height: 10px;
+  float: right;
+  margin-right: 345px;
+  margin-top: 345px;
+}
